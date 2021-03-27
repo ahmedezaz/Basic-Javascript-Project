@@ -45,6 +45,8 @@ Passed
 
 /* end golf.js */
 
+
+
 /* counting cards */ 
 Count Change	Cards
 +1	2, 3, 4, 5, 6
@@ -58,3 +60,35 @@ Example Output
 5 Bet
 
 /* end counting cards */
+
+/* recordCard Algorithm */
+You are given a JSON object representing a part of your musical album collection. Each album has a unique id number as its key and several other properties. Not all albums have complete information.
+
+You start with an updateRecords function that takes an object like collection, an id, a prop (like artist or tracks), and a value. Complete the function using the rules below to modify the object passed to the function.
+
+Your function must always return the entire object.
+If prop isn't tracks and value isn't an empty string, update or set that album's prop to value.
+If prop is tracks but the album doesn't have a tracks property, create an empty array and add value to it.
+If prop is tracks and value isn't an empty string, add value to the end of the album's existing tracks array.
+If value is an empty string, delete the given prop property from the album.
+Note: A copy of the collection object is used for the tests.
+Example:
+After updateRecords(collection, 5439, "artist", "ABBA"), artist should be the string ABBA
+
+Passed
+After updateRecords(collection, 5439, "tracks", "Take a Chance on Me"), tracks should have the string Take a Chance on Me as the last element.
+
+Passed
+After updateRecords(collection, 2548, "artist", ""), artist should not be set
+
+Passed
+After updateRecords(collection, 1245, "tracks", "Addicted to Love"), tracks should have the string Addicted to Love as the last element.
+
+Passed
+After updateRecords(collection, 2468, "tracks", "Free"), tracks should have the string 1999 as the first element.
+
+Passed
+After updateRecords(collection, 2548, "tracks", ""), tracks should not be set
+
+Passed
+After updateRecords(collection, 1245, "albumTitle", "Riptide"), albumTitle should be the string Riptide
